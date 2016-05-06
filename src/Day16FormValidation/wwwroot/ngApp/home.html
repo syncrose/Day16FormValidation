@@ -1,0 +1,25 @@
+<h2>Home</h2>
+<p>
+    {{controller.message}}
+</p>
+<hr />
+<form novalidate ng-submit="controller.add()" name="carForm">
+    <div>
+        <label>
+            Model:
+            <input  id="modelInput"name="model" ng-model="controller.model" type="text" required />
+            <span ng-show="carForm.model.$touched && carForm.model.$error.required" class="error">Car Model is required</span>
+        </label>
+    </div>
+    <div>
+        <label>
+            Price:
+            <input name="price" ng-model="controller.price" type="number" required />
+        </label>
+    </div>
+    <div>
+       
+        <input type="submit" value="Add" />
+       
+    </div>
+</form>
